@@ -145,7 +145,7 @@ h2 {
 }
 
 #my-horizontal-img {
-    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
 }
 
 #horizontal {
@@ -161,6 +161,6 @@ h2 {
 
 }
 #horizontal-slider {
-    
+    appearance: slider-vertical;
 }
 

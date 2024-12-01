@@ -5,7 +5,7 @@ function verticalSlide() {
 }
 
 function horizontalSlide() {
-    let slideValue = document.getElementById("horizontal-slider").value;
+    let slideValue = 100 - (document.getElementById("horizontal-slider").value);
 
-    document.getElementById("my-horizontal-img").style.clipPath="polygon(0 0, 100% 0, 100% " + slideValue + "%, 0 " + slideValue + "%)"
+    document.getElementById("my-horizontal-img").style.clipPath="polygon(0 " + slideValue + "%, 100% " + slideValue + "%, 100% 100%, 0 100%)"
 }
