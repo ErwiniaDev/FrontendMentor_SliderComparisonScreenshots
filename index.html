@@ -19,23 +19,17 @@
                     <section class="column">
                         <h2>Verticale</h2>
                         <div id="vertical" class="container-slider">
-                            <div class="img-comp-img">
-                                <img src="assets/images/image1.jpg" alt="">
-                            </div>
-                            <div class="img-comp-img img-comp-overlay">
-                                <img src="assets/images/image2.jpg" alt="">
-                            </div>
+                            <img class="img-comp-img" src="assets/images/image1.jpg" alt="Image of the right for the vertical slider">
+                            <img class="img-comp-img" id="my-vertical-img" src="assets/images/image2.jpg" alt="Image of the left for the vertical slider">
+                            <input type="range" min="0" max="100" value="50" class="slider" id="vertical-slider" oninput="verticalSlide()">
                         </div>
                     </section>
                     <section class="column">
                         <h2>Horizontale</h2>
                         <div id="horizontal" class="container-slider">
-                            <div class="img-comp-img">
-                                <img src="assets/images/image1.jpg" alt="">
-                            </div>
-                            <div class="img-comp-img img-comp-overlay">
-                                <img src="assets/images/image2.jpg" alt="">
-                            </div>
+                            <img class="img-comp-img" src="assets/images/image1.jpg" alt="Image of the right for the horizontal slider">
+                            <img class="img-comp-img" id="my-horizontal-img" src="assets/images/image2.jpg" alt="Image of the left for the horizontal slider">
+                            <input type="range" min="0" max="100" value="50" class="slider" id="horizontal-slider" oninput="horizontalSlide()">
                         </div>
                     </section>
                 </div>
