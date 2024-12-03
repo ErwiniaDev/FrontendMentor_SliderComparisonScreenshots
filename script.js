@@ -9,3 +9,7 @@ function horizontalSlide() {
 
     document.getElementById("my-horizontal-img").style.clipPath="polygon(0 " + slideValue + "%, 100% " + slideValue + "%, 100% 100%, 0 100%)"
 }
+
+function redirect(url) {
+    window.location = url;
+}

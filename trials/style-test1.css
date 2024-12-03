@@ -4,8 +4,7 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    /*Paddings and margins are considered in the max-size*/
+    box-sizing: border-box; /*Paddings and margins are considered in the max-size*/
 }
 
 /* Remove default padding */
@@ -35,8 +34,7 @@ dd {
 /* Set core body defaults */
 body {
     min-height: 100vh;
-    min-height: 100svh;
-    /*For browsers that support this unity*/
+    min-height: 100svh; /*For browsers that support this unity*/
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
     line-height: 1.5; /*Default = 1.2*/
@@ -84,88 +82,67 @@ select {
 }
 */
 
-body {
-    padding: 15px;
-    background-color: rgb(232, 209 , 181);
-    display: flex;
-    justify-content: center;
+main,
+header,
+nav,
+footer {
+    border: 2px solid black;
 }
 
-main {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
+section {
+    border: 2px solid blue;
 }
 
-h1 {
-    font-size: 2rem;
-    text-align: center;
-    padding: 15px;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-}
-
-.wrapper {
-    max-width: 200rem;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-#sliders-line {
-    display: flex;
-    flex: 1;
-    gap: 15px;
-}
-
-.column {    
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.container-slider {
-    position: relative;
+.container {
+    border: 2px solid red;
     border-radius: 10px;
+    /* Modifs */
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.container img {
+    /*position: absolute;*/
+    border-radius: 10px;
+    /* Modifs */
+    width: 100%;
     height: auto;
 }
 
-.img-comp-img {
+/* Modifs */
+#my-vertical-img-test1 {
     position: absolute;
-    overflow: hidden;
-    border-radius: 10px;
+    top: 0;
+    left: 0;
+    clip-path: inset(0 50% 0 0);
 }
 
-#my-vertical-img {
-    clip-path: polygon(0 0 , 50% 0, 50% 100%, 0 100%);
+#my-horizontal-img-test1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: inset(50% 0 0 0);
 }
 
-#my-horizontal-img {
-    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
-}
-
-#horizontal {
-
-}
-
-#vertical {
-}
-
-.slider {
-    position: relative;
+input[type="range"] {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
 }
-#vertical-slider {
+
+#vertical-slider-test1 {
 
 }
 
-#horizontal-slider {
-    appearance: slider-vertical;
-    height: 100%;
+#horizontal-slider-test1 {
+    writing-mode: vertical-lr;
+    direction: rtl;
 }
 
+footer {
+    display: none;
+}

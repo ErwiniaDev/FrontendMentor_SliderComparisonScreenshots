@@ -16,7 +16,7 @@
                     <h1>Fidélité</h1>
                 </div>
                 <div id="sliders-line" class="line">
-                    <section class="column">
+                    <section class="column" aria-label="Vertical slider">
                         <h2>Verticale</h2>
                         <div id="vertical" class="container-slider">
                             <img class="img-comp-img" src="assets/images/image1.jpg" alt="Image of the right for the vertical slider">
@@ -24,7 +24,7 @@
                             <input type="range" min="0" max="100" value="50" class="slider" id="vertical-slider" oninput="verticalSlide()">
                         </div>
                     </section>
-                    <section class="column">
+                    <section class="column" aria-label="Horizontal slider">
                         <h2>Horizontale</h2>
                         <div id="horizontal" class="container-slider">
                             <img class="img-comp-img" src="assets/images/image1.jpg" alt="Image of the top for the horizontal slider">
@@ -32,9 +32,12 @@
                             <input type="range" min="0" max="100" value="50" class="slider" id="horizontal-slider" oninput="horizontalSlide()">
                         </div>
                     </section>
-                </div>
+                </div>                
             </div>
         </main>
+        <nav class="line">
+            <button type="button" onclick="redirect('./trials/page-test1.html')">Tests</button>
+        </nav>
         <footer></footer>
     </body>
 </html>
