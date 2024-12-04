@@ -39,7 +39,8 @@ body {
     /*For browsers that support this unity*/
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
-    line-height: 1.5; /*Default = 1.2*/
+    line-height: 1.5;
+    /*Default = 1.2*/
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -59,10 +60,10 @@ img {
     display: block;
 }
 
-/* Natural flow and rhythm in articles by default 
+/* Natural flow and rhythm in articles by default */
 article>*+* {
     margin-top: 1em;
-}*/
+}
 
 /* Inherit fonts for inputs and buttons */
 input,
@@ -84,88 +85,147 @@ select {
 }
 */
 
+main,
+header,
+nav,
+footer {}
+
 body {
+    text-align: center;
+    color: rgb(33, 33, 33);
     padding: 15px;
-    background-color: rgb(232, 209 , 181);
-    display: flex;
-    justify-content: center;
 }
 
 main {
     display: flex;
-    flex-direction: row;
-    flex: 1;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 h1 {
     font-size: 2rem;
-    text-align: center;
     padding: 15px;
 }
 
 h2 {
-    text-align: center;
-    margin-bottom: 10px;
     font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
-.wrapper {
-    max-width: 200rem;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+section {
+    max-width: calc(50% - 10px);
+    flex-basis: calc(50% - 10px);
 }
 
-#sliders-line {
-    display: flex;
-    flex: 1;
-    gap: 15px;
-}
-
-.column {    
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.container-slider {
-    position: relative;
+.container {
     border-radius: 10px;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-width: 200px;
+    overflow: hidden;
+    border: 2px solid rgba(77, 77, 77, 0.777);
+}
+
+.container img {
+    border-radius: 10px;
+    width: 100%;
     height: auto;
 }
 
-.img-comp-img {
-    position: absolute;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
 #my-vertical-img {
-    clip-path: polygon(0 0 , 50% 0, 50% 100%, 0 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: inset(0 50% 0 0);
 }
 
 #my-horizontal-img {
-    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: inset(50% 0 0 0);
 }
 
-#horizontal {
-
+input[type="range"] {
+    position: absolute;
+    top: -17px;
+    left: -17px;
+    width: calc(100% + 31px);
+    height: calc(100% + 31px);
+    -webkit-appearance: none;
+    appearance: none;
+    background: none;
 }
 
-#vertical {
+#vertical-slider {}
+
+/*Poignée pour Chrome, Opera, Safari, Edge */
+#vertical-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 31px;
+    height: 31px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    background: url('assets/images/double-arrow_horizontal_30.png');
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
 }
 
-.slider {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-#vertical-slider {
-
+/*Poignée pour Firefox*/
+#vertical-slider::-moz-range-thumb {
+    width: 31px;
+    height: 31px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: url('assets/images/double-arrow_horizontal_30.png');
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
 }
 
 #horizontal-slider {
-    appearance: slider-vertical;
-    height: 100%;
+    writing-mode: vertical-lr;
+    direction: rtl;
 }
 
+/*Poignée pour Chrome, Opera, Safari, Edge */
+#horizontal-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 31px;
+    height: 31px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    background: url('assets/images/double-arrow_vertical_30.png');
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+/*Poignée pour Firefox*/
+#horizontal-slider::-moz-range-thumb {
+    width: 31px;
+    height: 31px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: url('assets/images/double-arrow_vertical_30.png');
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+footer {
+    display: none;
+}
+
+button {
+    margin: 40px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    background-color: #333333;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #474747;
+    cursor: pointer;
+}

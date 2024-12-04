@@ -4,40 +4,42 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
         <script src="script.js"></script>
-        <title>Slider de comparaison de fidélité</title>
+        <title>Slider de fidélité</title>
     </head>
     <body>
-        <header></header>
+        <header>
+            <h1>Comparaison</h1>
+            <p>Réalisé grâce à Frontend Mentor</p>
+        </header>
+    
         <main>
-            <div class="wrapper">
-                <div id="title-line" class="line">
-                    <h1>Fidélité</h1>
+            <section>
+                <h2>Verticale</h2>
+                <div class="container">
+                    <img src="assets/images/image1.jpg" alt="Image of the right for the vertical slider">
+                    <img src="assets/images/image2.jpg" id="my-vertical-img"
+                        alt="Image of the left for the vertical slider">
+                    <input type="range" min="0" max="100" value="50" id="vertical-slider" oninput="verticalSlide()">
                 </div>
-                <div id="sliders-line" class="line">
-                    <section class="column" aria-label="Vertical slider">
-                        <h2>Verticale</h2>
-                        <div id="vertical" class="container-slider">
-                            <img class="img-comp-img" src="assets/images/image1.jpg" alt="Image of the right for the vertical slider">
-                            <img class="img-comp-img" id="my-vertical-img" src="assets/images/image2.jpg" alt="Image of the left for the vertical slider">
-                            <input type="range" min="0" max="100" value="50" class="slider" id="vertical-slider" oninput="verticalSlide()">
-                        </div>
-                    </section>
-                    <section class="column" aria-label="Horizontal slider">
-                        <h2>Horizontale</h2>
-                        <div id="horizontal" class="container-slider">
-                            <img class="img-comp-img" src="assets/images/image1.jpg" alt="Image of the top for the horizontal slider">
-                            <img class="img-comp-img" id="my-horizontal-img" src="assets/images/image2.jpg" alt="Image of the bottom for the horizontal slider">
-                            <input type="range" min="0" max="100" value="50" class="slider" id="horizontal-slider" oninput="horizontalSlide()">
-                        </div>
-                    </section>
-                </div>                
-            </div>
+            </section>
+            <section>
+                <h2>Horizontale</h2>
+                <div class="container">
+                    <img src="assets/images/image1.jpg" alt="Image of the top for the horizontal slider">
+                    <img src="assets/images/image2.jpg" id="my-horizontal-img"
+                        alt="Image of the bottom for the horizontal slider">
+                    <input type="range" min="0" max="100" value="50" id="horizontal-slider"
+                        oninput="horizontalSlide()">
+                </div>
+            </section>
         </main>
-        <nav class="line">
-            <button type="button" onclick="redirect('./trials/page-test1.html')">Tests</button>
+        <nav>
+            <button type="button" onclick="redirect('trials/page-test1.html')">Tests</button>
         </nav>
-        <footer></footer>
+        <footer>
+    
+        </footer>
     </body>
 </html>
