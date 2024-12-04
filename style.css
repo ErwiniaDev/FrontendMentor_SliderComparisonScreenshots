@@ -97,8 +97,9 @@ body {
 }
 
 main {
-    display: flex;
-    justify-content: space-between;
+    display: flex;    
+    max-width: 90%;
+    margin: 0 auto;
     gap: 20px;
 }
 
@@ -112,7 +113,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-section {
+section {    
     max-width: calc(50% - 10px);
     flex-basis: calc(50% - 10px);
 }
